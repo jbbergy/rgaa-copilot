@@ -8,9 +8,11 @@
     "build": "npm run build:firefox && npm run build:chrome",
     "build:firefox": "vite build --mode firefox",
     "build:chrome": "vite build --mode chrome",
+    "start:firefox": "npm run build:firefox && web-ext run --source-dir=dist/firefox --firefox-profile=dev-profile --keep-profile-changes --start-url=about:debugging",
+    "start:chrome": "npm run build:chrome && web-ext run --source-dir=dist/chrome --target=chromium",
     "package": "npm run build && npm run package:firefox && npm run package:chrome",
-    "package:firefox": "powershell -Command \"Compress-Archive -Path 'dist/firefox/*' -DestinationPath 'rgaa-copilot-firefox.zip' -Force\"",
-    "package:chrome": "powershell -Command \"Compress-Archive -Path 'dist/chrome/*' -DestinationPath 'rgaa-copilot-chrome.zip' -Force\"",
+    "package:firefox": "web-ext build --source-dir=dist/firefox --artifacts-dir=. --filename=rgaa-copilot-firefox.zip --overwrite-dest",
+    "package:chrome": "cd dist/chrome && powershell -Command \"Compress-Archive -Path '*' -DestinationPath '../../rgaa-copilot-chrome.zip' -Force\" && cd ../..",
     "icons": "node scripts/generate-icons-svg.js",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
@@ -36,7 +38,8 @@
     "terser": "^5.44.1",
     "vite": "^5.0.0",
     "vite-plugin-web-extension": "^4.0.0",
-    "vitest": "^1.0.0"
+    "vitest": "^1.0.0",
+    "web-ext": "^9.2.0"
   },
   "engines": {
     "node": ">=18.0.0"

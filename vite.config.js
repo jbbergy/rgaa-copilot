@@ -23,6 +23,13 @@ export default defineConfig(({ mode }) => {
             128: "icons/icon-128.png"
           },
           permissions: ["activeTab", "storage", "tabs"],
+          // Firefox MV3 requires an addon ID (T302)
+          browser_specific_settings: isFirefox ? {
+            gecko: {
+              id: "rgaa-copilot@accessibility.gouv.fr",
+              strict_min_version: "115.0"
+            }
+          } : undefined,
           // Content Security Policy - no eval() or unsafe-inline (T202)
           content_security_policy: {
             extension_pages: "script-src 'self'; object-src 'self'"
