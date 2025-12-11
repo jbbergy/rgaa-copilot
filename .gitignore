@@ -44,5 +44,8 @@ playwright-report/
 web-ext-artifacts/
 .web-extension-id
 
+# Release packages
+*.zip
+
 # Build artifacts
 vite.config.js.timestamp-*.mjs
