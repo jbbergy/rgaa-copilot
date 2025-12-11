@@ -1,0 +1,149 @@
+{
+  "app": {
+    "title": "RGAA Copilot",
+    "subtitle": "Vérificateur de conformité accessibilité"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "close": "Fermer",
+    "pass": "Réussi",
+    "fail": "Échoué",
+    "manualCheck": "Manuel",
+    "skipToResults": "Aller aux résultats"
+  },
+  "audit": {
+    "startButton": "Lancer l'audit",
+    "rescanButton": "Re-scanner la page",
+    "inProgress": "Audit en cours...",
+    "complete": "Audit terminé",
+    "completeAnnouncement": "Audit terminé. {passed} conformes, {failed} non conformes, {manual} nécessitent une vérification manuelle.",
+    "progress": "Progression de l'audit : {current} sur {total} critères vérifiés",
+    "summary": {
+      "label": "Résumé des résultats d'audit",
+      "passed": "Conformes",
+      "failed": "Non conformes",
+      "manual": "Vérification manuelle requise",
+      "notApplicable": "Non applicable",
+      "passedDescription": "Critères qui ont passé les vérifications d'accessibilité automatiques",
+      "failedDescription": "Critères qui ont échoué aux vérifications d'accessibilité automatiques",
+      "manualDescription": "Critères qui nécessitent une vérification manuelle par un examinateur humain"
+    },
+    "filter": {
+      "toggle": "Cliquer pour filtrer",
+      "active": "Filtre actif",
+      "inactive": "Filtre inactif"
+    }
+  },
+  "criterion": {
+    "details": "Détails",
+    "listLabel": "Résultats des critères d'audit",
+    "expandHint": "Appuyez sur Entrée pour développer",
+    "severity": "Niveau",
+    "level": "Niveau",
+    "wcagMapping": "Correspondance WCAG",
+    "affectedElements": "Éléments concernés",
+    "remediation": "Comment corriger",
+    "testProcedure": "Procédure de test",
+    "documentation": "Documentation officielle",
+    "closeDetail": "Fermer les détails",
+    "whyItMatters": "Pourquoi c'est important",
+    "violations": "Violations détectées",
+    "howToFix": "Comment corriger",
+    "beforeFix": "Avant correction",
+    "afterFix": "Après correction",
+    "stepByStep": "Étapes de correction",
+    "manualVerification": "Vérification manuelle requise",
+    "viewOfficialRGAA": "Voir la documentation RGAA officielle",
+    "showMore": "Afficher {count} de plus",
+    "showLess": "Afficher moins",
+    "passed": "Conforme",
+    "failed": "Non conforme",
+    "manualCheck": "Vérification manuelle",
+    "notApplicable": "Non applicable",
+    "selector": "Sélecteur CSS",
+    "locate": "Localiser",
+    "htmlCode": "Code HTML",
+    "highlightElement": "Mettre en surbrillance l'élément sur la page",
+    "moreViolations": "autres éléments",
+    "elementType": "Type d'élément"
+  },
+  "export": {
+    "button": "Exporter le rapport",
+    "title": "Exporter les résultats d'audit",
+    "formatLabel": "Sélectionner le format",
+    "formats": {
+      "html": "Rapport HTML",
+      "htmlDesc": "Rapport visuel autonome avec CSS intégré",
+      "json": "Données JSON",
+      "jsonDesc": "Données structurées pour analyse ou intégration",
+      "csv": "Tableur CSV",
+      "csvDesc": "Format tableur pour Excel ou Google Sheets"
+    },
+    "download": "Télécharger",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "exporting": "Export en cours...",
+    "error": "Échec de l'export. Veuillez réessayer."
+  },
+  "history": {
+    "button": "Historique des audits",
+    "title": "Audits précédents",
+    "auditList": "Liste des audits précédents",
+    "empty": "Aucun historique d'audit",
+    "emptyHint": "Lancez un audit pour commencer à suivre les améliorations d'accessibilité au fil du temps",
+    "compare": "Comparer",
+    "comparing": "Comparaison de",
+    "comparison": "Comparaison d'audits",
+    "baseline": "Référence",
+    "current": "Actuel",
+    "with": "avec",
+    "clearComparison": "Effacer la comparaison",
+    "clear": "Effacer",
+    "clearAll": "Effacer tout l'historique",
+    "confirmClearAll": "Êtes-vous sûr de vouloir supprimer tous les audits pour cette page ?",
+    "delete": "Supprimer",
+    "deleteAudit": "Supprimer l'audit du {date}",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet audit ?",
+    "errorLoading": "Échec du chargement de l'historique",
+    "newlyPassed": "Nouvellement réussis",
+    "newlyFailed": "Nouvellement échoués",
+    "unchanged": "Inchangés",
+    "improved": "Amélioré",
+    "regressed": "Régressé"
+  },
+  "help": {
+    "button": "Aide et raccourcis clavier",
+    "title": "Aide",
+    "keyboardShortcuts": "Raccourcis clavier",
+    "key": "Touche",
+    "action": "Action",
+    "shortcuts": {
+      "escape": "Fermer les dialogues et panneaux",
+      "tab": "Déplacer le focus vers l'élément suivant",
+      "activate": "Activer le bouton ou développer le critère",
+      "navigate": "Naviguer dans la liste des critères",
+      "home": "Aller au premier critère",
+      "end": "Aller au dernier critère",
+      "pageUpDown": "Faire défiler la liste des critères par page"
+    },
+    "about": "À propos",
+    "description": "RGAA Copilot vous aide à évaluer la conformité à l'accessibilité selon le RGAA 4.1 (référentiel français d'accessibilité) et les règles WCAG 2.1.",
+    "version": "Version de l'extension",
+    "rgaaVersion": "Version RGAA",
+    "resources": "Ressources",
+    "rgaaReference": "Référence officielle RGAA 4.1",
+    "wcagQuickref": "Référence rapide WCAG 2.1"
+  },
+  "settings": {
+    "language": "Langue",
+    "theme": "Thème",
+    "switchLanguage": "Changer de langue",
+    "currentLanguage": "Langue actuelle : {lang}"
+  },
+  "errors": {
+    "auditFailed": "L'audit a échoué. Veuillez réessayer.",
+    "noContentScript": "Veuillez actualiser la page et réessayer.",
+    "iframeWarning": "Cette page contient des iframes cross-origin qui ne peuvent pas être auditées.",
+    "storageQuota": "Quota de stockage à {percent}% - envisagez de vider l'historique des audits"
+  }
+}

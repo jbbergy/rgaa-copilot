@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <circle cx="64" cy="64" r="60" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+  <g fill="#FFFFFF">
+    <circle cx="64" cy="32" r="8"/>
+    <ellipse cx="64" cy="68" rx="18" ry="28" opacity="0.9"/>
+    <circle cx="64" cy="90" r="16" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.4"/>
+    <circle cx="64" cy="90" r="12" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
+  </g>
+  <text x="64" y="118" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">RGAA</text>
+</svg>

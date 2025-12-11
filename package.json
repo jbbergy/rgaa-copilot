@@ -1,0 +1,41 @@
+{
+  "name": "rgaa-copilot",
+  "version": "0.1.0",
+  "description": "RGAA Copilot - Your accessibility companion for Firefox and Chrome",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:firefox && npm run build:chrome",
+    "build:firefox": "vite build --mode firefox",
+    "build:chrome": "vite build --mode chrome",
+    "icons": "node scripts/generate-icons-svg.js",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:firefox": "playwright test --project=firefox",
+    "test:e2e:chrome": "playwright test --project=chrome",
+    "test:manual:firefox": "powershell -ExecutionPolicy Bypass -File test-firefox.ps1",
+    "lint": "eslint . --ext .js,.vue",
+    "format": "prettier --write \"**/*.{js,vue,json,md}\""
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "webextension-polyfill": "^0.12.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-vue": "^9.19.0",
+    "jsdom": "^27.0.1",
+    "prettier": "^3.1.0",
+    "terser": "^5.44.1",
+    "vite": "^5.0.0",
+    "vite-plugin-web-extension": "^4.0.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

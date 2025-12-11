@@ -1,0 +1,149 @@
+{
+  "app": {
+    "title": "RGAA Copilot",
+    "subtitle": "Accessibility Compliance Checker"
+  },
+  "common": {
+    "loading": "Loading...",
+    "close": "Close",
+    "pass": "Pass",
+    "fail": "Fail",
+    "manualCheck": "Manual",
+    "skipToResults": "Skip to results"
+  },
+  "audit": {
+    "startButton": "Start Audit",
+    "rescanButton": "Re-scan Page",
+    "inProgress": "Audit in progress...",
+    "complete": "Audit complete",
+    "completeAnnouncement": "Audit complete. {passed} passed, {failed} failed, {manual} require manual check.",
+    "progress": "Audit progress: {current} of {total} criteria checked",
+    "summary": {
+      "label": "Audit Results Summary",
+      "passed": "Passed",
+      "failed": "Failed",
+      "manual": "Manual Check Required",
+      "notApplicable": "Not Applicable",
+      "passedDescription": "Criteria that passed automated accessibility checks",
+      "failedDescription": "Criteria that failed automated accessibility checks",
+      "manualDescription": "Criteria that require manual verification by a human reviewer"
+    },
+    "filter": {
+      "toggle": "Click to filter",
+      "active": "Filter active",
+      "inactive": "Filter inactive"
+    }
+  },
+  "criterion": {
+    "details": "Details",
+    "listLabel": "Audit criteria results",
+    "expandHint": "Press Enter to expand",
+    "severity": "Severity",
+    "level": "Level",
+    "wcagMapping": "WCAG Mapping",
+    "affectedElements": "Affected Elements",
+    "remediation": "How to Fix",
+    "testProcedure": "Test Procedure",
+    "documentation": "Official Documentation",
+    "closeDetail": "Close details",
+    "whyItMatters": "Why it matters",
+    "violations": "Detected violations",
+    "howToFix": "How to fix",
+    "beforeFix": "Before fix",
+    "afterFix": "After fix",
+    "stepByStep": "Step-by-step guide",
+    "manualVerification": "Manual verification required",
+    "viewOfficialRGAA": "View official RGAA documentation",
+    "showMore": "Show {count} more",
+    "showLess": "Show less",
+    "passed": "Passed",
+    "failed": "Failed",
+    "manualCheck": "Manual check",
+    "notApplicable": "Not applicable",
+    "selector": "CSS Selector",
+    "locate": "Locate",
+    "htmlCode": "HTML Code",
+    "highlightElement": "Highlight element on page",
+    "moreViolations": "more elements",
+    "elementType": "Element type"
+  },
+  "export": {
+    "button": "Export Report",
+    "title": "Export Audit Results",
+    "formatLabel": "Select Format",
+    "formats": {
+      "html": "HTML Report",
+      "htmlDesc": "Standalone visual report with embedded CSS",
+      "json": "JSON Data",
+      "jsonDesc": "Structured data for analysis or integration",
+      "csv": "CSV Spreadsheet",
+      "csvDesc": "Spreadsheet format for Excel or Google Sheets"
+    },
+    "download": "Download",
+    "cancel": "Cancel",
+    "close": "Close",
+    "exporting": "Exporting...",
+    "error": "Export failed. Please try again."
+  },
+  "history": {
+    "button": "Audit History",
+    "title": "Previous Audits",
+    "auditList": "List of previous audits",
+    "empty": "No audit history yet",
+    "emptyHint": "Run an audit to start tracking accessibility improvements over time",
+    "compare": "Compare",
+    "comparing": "Comparing",
+    "comparison": "Audit Comparison",
+    "baseline": "Baseline",
+    "current": "Current",
+    "with": "with",
+    "clearComparison": "Clear Comparison",
+    "clear": "Clear",
+    "clearAll": "Clear All History",
+    "confirmClearAll": "Are you sure you want to delete all audits for this page?",
+    "delete": "Delete",
+    "deleteAudit": "Delete audit from {date}",
+    "confirmDelete": "Are you sure you want to delete this audit?",
+    "errorLoading": "Failed to load history",
+    "newlyPassed": "Newly Passed",
+    "newlyFailed": "Newly Failed",
+    "unchanged": "Unchanged",
+    "improved": "Improved",
+    "regressed": "Regressed"
+  },
+  "help": {
+    "button": "Help & Keyboard Shortcuts",
+    "title": "Help",
+    "keyboardShortcuts": "Keyboard Shortcuts",
+    "key": "Key",
+    "action": "Action",
+    "shortcuts": {
+      "escape": "Close dialogs and panels",
+      "tab": "Move focus to next element",
+      "activate": "Activate button or expand criterion",
+      "navigate": "Navigate through criteria list",
+      "home": "Jump to first criterion",
+      "end": "Jump to last criterion",
+      "pageUpDown": "Scroll through criteria list by page"
+    },
+    "about": "About",
+    "description": "RGAA Copilot helps you evaluate web accessibility compliance according to RGAA 4.1 (French accessibility standard) and WCAG 2.1 guidelines.",
+    "version": "Extension Version",
+    "rgaaVersion": "RGAA Version",
+    "resources": "Resources",
+    "rgaaReference": "RGAA 4.1 Official Reference",
+    "wcagQuickref": "WCAG 2.1 Quick Reference"
+  },
+  "settings": {
+    "language": "Language",
+    "theme": "Theme",
+    "switchLanguage": "Switch language",
+    "currentLanguage": "Current language: {lang}"
+  },
+  "errors": {
+    "auditFailed": "Audit failed. Please try again.",
+    "noContentScript": "Please refresh the page and try again.",
+    "iframeWarning": "This page contains cross-origin iframes that cannot be audited.",
+    "storageQuota": "Storage quota at {percent}% - consider clearing old audit history"
+  }
+}

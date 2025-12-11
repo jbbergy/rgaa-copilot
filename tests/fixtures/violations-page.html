@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<!-- Missing lang attribute - RGAA 8.3 violation -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Missing page title - RGAA 8.5 violation -->
+  <style>
+    body {
+      font-family: Arial;
+      /* Low contrast text - RGAA 3.2 violation */
+      color: #999;
+      background: #fff;
+    }
+
+    /* Link not distinguishable from text - RGAA 10.6 violation */
+    a {
+      color: #999;
+      text-decoration: none;
+    }
+
+    /* Missing focus styles - RGAA 10.7 violation */
+    a:focus,
+    button:focus {
+      outline: none;
+    }
+
+    .hidden-focus {
+      display: none;
+    }
+
+    .hidden-focus:focus {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- No skip link - RGAA 12.7 violation -->
+  <!-- No landmarks - RGAA 12.6 violation -->
+
+  <div>
+    <!-- Multiple H1s and skipped heading levels - RGAA 9.1 violations -->
+    <h1>First Heading</h1>
+    <h1>Second H1 (duplicate)</h1>
+    <h4>Skipped to H4 (hierarchy violation)</h4>
+  </div>
+
+  <!-- Images section with violations -->
+  <div>
+    <h2>Images with Issues</h2>
+
+    <!-- Missing alt attribute - RGAA 1.1 violation -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3C/svg%3E">
+
+    <!-- Empty alt on informative image - RGAA 1.2 violation -->
+    <img
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='10' y='50'%3EImportant Info%3C/text%3E%3C/svg%3E"
+      alt=""
+    >
+
+    <!-- Non-descriptive alt - RGAA 1.3 violation -->
+    <img
+      src="chart.png"
+      alt="image"
+    >
+    <img
+      src="photo.jpg"
+      alt="photo"
+    >
+    <img
+      src="graph.png"
+      alt="graph.png"
+    >
+  </div>
+
+  <!-- Forms section with violations -->
+  <div>
+    <h2>Forms with Issues</h2>
+
+    <form>
+      <!-- Input without label - RGAA 11.1 violation -->
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter username"
+      >
+
+      <!-- Input without associated label - RGAA 11.1 violation -->
+      <label>Email</label>
+      <input
+        type="email"
+        name="email"
+      >
+
+      <!-- Radio buttons not grouped - RGAA 11.5 violation -->
+      <input
+        type="radio"
+        name="option"
+        value="1"
+      > Option 1
+      <input
+        type="radio"
+        name="option"
+        value="2"
+      > Option 2
+
+      <!-- Fieldset without legend - RGAA 11.6 violation -->
+      <fieldset>
+        <input
+          type="checkbox"
+          name="agree"
+        > I agree
+      </fieldset>
+
+      <!-- Required field without visual indicator - RGAA 11.10 violation -->
+      <label for="required-field">Required Field</label>
+      <input
+        type="text"
+        id="required-field"
+        required
+      >
+
+      <!-- Missing autocomplete on personal data - RGAA 11.13 violation -->
+      <label for="fullname">Full Name</label>
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+      >
+
+      <label for="user-email">Email Address</label>
+      <input
+        type="email"
+        id="user-email"
+        name="user-email"
+      >
+
+      <!-- Button without accessible name -->
+      <button type="submit"></button>
+    </form>
+  </div>
+
+  <!-- Tables section with violations -->
+  <div>
+    <h2>Tables with Issues</h2>
+
+    <!-- Data table without headers - RGAA 5.6 violation -->
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>City</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>30</td>
+        <td>Paris</td>
+      </tr>
+    </table>
+
+    <!-- Table without caption - RGAA 5.4 violation -->
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Item A</td>
+          <td>10€</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Links section with violations -->
+  <div>
+    <h2>Links with Issues</h2>
+
+    <!-- Non-explicit links - RGAA 6.1 violations -->
+    <a href="page1.html">Click here</a>
+    <a href="page2.html">Learn more</a>
+    <a href="page3.html">Read more</a>
+
+    <!-- Link without text - RGAA 6.2 violation -->
+    <a href="home.html"></a>
+
+    <!-- Image link without alt - RGAA 6.2 violation -->
+    <a href="products.html">
+      <img src="icon.png">
+    </a>
+  </div>
+
+  <!-- Frames section with violations -->
+  <div>
+    <h2>Frames with Issues</h2>
+
+    <!-- iframe without title - RGAA 2.1 violation -->
+    <iframe
+      src="about:blank"
+      width="300"
+      height="200"
+    ></iframe>
+
+    <!-- iframe with non-descriptive title - RGAA 2.2 violation -->
+    <iframe
+      src="about:blank"
+      title="iframe"
+      width="300"
+      height="200"
+    ></iframe>
+  </div>
+
+  <!-- Media section with violations -->
+  <div>
+    <h2>Media with Issues</h2>
+
+    <!-- Video without captions - RGAA 4.3 violation -->
+    <video
+      src="video.mp4"
+      controls
+    ></video>
+
+    <!-- Audio/video autoplay - RGAA 13.5 violation -->
+    <video
+      src="promo.mp4"
+      autoplay
+    ></video>
+
+    <!-- Video without controls - RGAA 4.11 violation -->
+    <video
+      src="background.mp4"
+      loop
+      muted
+    ></video>
+  </div>
+
+  <!-- Scripts section with violations -->
+  <div>
+    <h2>Interactive Elements with Issues</h2>
+
+    <!-- Custom button without ARIA - RGAA 7.1 violation -->
+    <div
+      onclick="doSomething()"
+      style="cursor: pointer; padding: 10px; background: #eee;"
+    >
+      Click me
+    </div>
+
+    <!-- Missing live region for status - RGAA 7.5 violation -->
+    <div id="status">Loading...</div>
+
+    <!-- Single-key shortcut - RGAA 12.10 violation -->
+    <button accesskey="s">Save</button>
+  </div>
+
+  <!-- Language change not indicated - RGAA 8.7 violation -->
+  <p>Welcome to our site. Bienvenue sur notre site.</p>
+
+  <!-- Deprecated presentational elements - RGAA 8.9 violation -->
+  <center>Centered text</center>
+  <font color="red">Red text</font>
+  <b>Bold without semantic meaning</b>
+
+  <!-- Content only visible on hover - RGAA 10.13 issue -->
+  <div
+    class="hidden-focus"
+    tabindex="0"
+  >
+    This content appears on focus but may not be accessible.
+  </div>
+
+  <!-- Moving content without controls - RGAA 13.3 violation -->
+  <marquee>Scrolling announcement text</marquee>
+
+  <script>
+    // No-op function for onclick
+    function doSomething() { }
+  </script>
+</body>
+
+</html>

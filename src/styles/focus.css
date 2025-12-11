@@ -1,0 +1,58 @@
+/**
+ * Focus Indicator Styles - Spotify-inspired
+ * WCAG 2.4.7 (RGAA 10.7) - Focus Visible
+ * Minimum 2px width with Spotify green, high contrast
+ */
+
+/* Remove default outline, replace with custom focus indicator */
+*:focus {
+  outline: none;
+}
+
+/* Custom focus indicator - 2px solid border with offset (Spotify style) */
+*:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Interactive elements get enhanced focus with glow effect */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(29, 185, 84, 0.2);
+}
+
+/* Skip to content link (hidden until focused) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  z-index: var(--z-modal);
+  border-radius: 0 0 var(--radius-md) 0;
+  font-weight: var(--font-weight-bold);
+  transition: top var(--transition-base);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Ensure focus is visible in high contrast mode */
+@media (prefers-contrast: high) {
+  *:focus-visible {
+    outline-width: 3px;
+    outline-offset: 3px;
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#3B82F6" stroke="#1E40AF" stroke-width="3"/>
+  
+  <!-- Accessibility symbol (white) -->
+  <g fill="#FFFFFF">
+    <!-- Head -->
+    <circle cx="64" cy="32" r="8"/>
+    
+    <!-- Body -->
+    <ellipse cx="64" cy="68" rx="18" ry="28" opacity="0.9"/>
+    
+    <!-- Left arm raised -->
+    <rect x="48" y="46" width="12" height="4" rx="2" transform="rotate(-35 54 48)"/>
+    
+    <!-- Right arm extended -->
+    <rect x="68" y="56" width="12" height="4" rx="2" transform="rotate(25 74 58)"/>
+    
+    <!-- Left leg -->
+    <rect x="52" y="84" width="6" height="18" rx="3" transform="rotate(-10 55 93)"/>
+    
+    <!-- Right leg -->
+    <rect x="70" y="84" width="6" height="18" rx="3" transform="rotate(10 73 93)"/>
+    
+    <!-- Wheelchair wheel accent -->
+    <circle cx="64" cy="90" r="16" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+    <circle cx="64" cy="90" r="12" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- RGAA text -->
+  <text x="64" y="118" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">RGAA</text>
+</svg>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Accessible Test Page - RGAA Copilot</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      color: #333;
+      background: #fff;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    a:focus,
+    button:focus,
+    input:focus {
+      outline: 3px solid #0066cc;
+      outline-offset: 2px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background: #f5f5f5;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      padding: 8px;
+      background: #000;
+      color: #fff;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    nav {
+      margin: 1rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+
+    main {
+      margin: 2rem 0;
+    }
+
+    fieldset {
+      margin: 1rem 0;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <a
+    href="#main-content"
+    class="skip-link"
+  >Skip to main content</a>
+
+  <header role="banner">
+    <h1>Accessible Test Page</h1>
+    <p>This page demonstrates accessible web practices for RGAA Copilot testing.</p>
+  </header>
+
+  <nav
+    role="navigation"
+    aria-label="Main navigation"
+  >
+    <ul>
+      <li><a href="#section-images">Images</a></li>
+      <li><a href="#section-forms">Forms</a></li>
+      <li><a href="#section-tables">Tables</a></li>
+      <li><a href="#section-media">Media</a></li>
+    </ul>
+  </nav>
+
+  <main
+    id="main-content"
+    role="main"
+  >
+    <section
+      id="section-images"
+      aria-labelledby="heading-images"
+    >
+      <h2 id="heading-images">Images with Proper Alternatives</h2>
+
+      <figure>
+        <img
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100' fill='%23f0f0f0'%3E%3Crect width='200' height='100'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23333'%3EChart%3C/text%3E%3C/svg%3E"
+          alt="Bar chart showing quarterly sales growth: Q1 10%, Q2 15%, Q3 20%, Q4 25%"
+          width="200"
+          height="100"
+        >
+        <figcaption>Figure 1: Quarterly sales growth chart</figcaption>
+      </figure>
+
+      <p>
+        Decorative image (properly hidden):
+        <img
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3C/svg%3E"
+          alt=""
+          role="presentation"
+        >
+      </p>
+    </section>
+
+    <section
+      id="section-forms"
+      aria-labelledby="heading-forms"
+    >
+      <h2 id="heading-forms">Accessible Forms</h2>
+
+      <form
+        action="#"
+        method="post"
+      >
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <div>
+            <label for="name">Full Name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              aria-required="true"
+              autocomplete="name"
+            >
+          </div>
+
+          <div>
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+              autocomplete="email"
+            >
+          </div>
+
+          <div>
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+            >
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <p id="contact-method-label">Preferred contact method:</p>
+          <div
+            role="radiogroup"
+            aria-labelledby="contact-method-label"
+          >
+            <label>
+              <input
+                type="radio"
+                name="contact"
+                value="email"
+                checked
+              > Email
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="contact"
+                value="phone"
+              > Phone
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="contact"
+                value="mail"
+              > Mail
+            </label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section
+      id="section-tables"
+      aria-labelledby="heading-tables"
+    >
+      <h2 id="heading-tables">Data Tables</h2>
+
+      <table>
+        <caption>Employee Directory - Marketing Department</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice Martin</td>
+            <td>Marketing Director</td>
+            <td>alice@example.com</td>
+          </tr>
+          <tr>
+            <td>Bob Wilson</td>
+            <td>Content Manager</td>
+            <td>bob@example.com</td>
+          </tr>
+          <tr>
+            <td>Carol Davis</td>
+            <td>SEO Specialist</td>
+            <td>carol@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section
+      id="section-media"
+      aria-labelledby="heading-media"
+    >
+      <h2 id="heading-media">Media Content</h2>
+
+      <video
+        controls
+        width="400"
+        poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' fill='%23333'%3E%3Crect width='400' height='225'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23fff'%3EVideo Placeholder%3C/text%3E%3C/svg%3E"
+      >
+        <track
+          kind="captions"
+          src="captions.vtt"
+          srclang="en"
+          label="English captions"
+        >
+        <track
+          kind="descriptions"
+          src="descriptions.vtt"
+          srclang="en"
+          label="Audio descriptions"
+        >
+        <p>Your browser does not support the video element. <a href="video-transcript.html">Read the transcript</a>.</p>
+      </video>
+    </section>
+
+    <section
+      id="section-headings"
+      aria-labelledby="heading-structure"
+    >
+      <h2 id="heading-structure">Document Structure</h2>
+      <h3>Subsection 1</h3>
+      <p>Content for subsection 1.</p>
+      <h3>Subsection 2</h3>
+      <p>Content for subsection 2.</p>
+      <h4>Nested subsection</h4>
+      <p>Content for nested subsection.</p>
+    </section>
+
+    <section
+      id="section-lists"
+      aria-labelledby="heading-lists"
+    >
+      <h2 id="heading-lists">Lists</h2>
+
+      <h3>Unordered List</h3>
+      <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ul>
+
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Step one</li>
+        <li>Step two</li>
+        <li>Step three</li>
+      </ol>
+
+      <h3>Definition List</h3>
+      <dl>
+        <dt>RGAA</dt>
+        <dd>Référentiel Général d'Amélioration de l'Accessibilité</dd>
+        <dt>WCAG</dt>
+        <dd>Web Content Accessibility Guidelines</dd>
+      </dl>
+    </section>
+
+    <section
+      id="section-quotes"
+      aria-labelledby="heading-quotes"
+    >
+      <h2 id="heading-quotes">Quotations</h2>
+
+      <blockquote cite="https://www.w3.org/WAI/">
+        <p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential
+          aspect.</p>
+        <footer>— <cite>Tim Berners-Lee</cite>, W3C Director</footer>
+      </blockquote>
+
+      <p>As the saying goes, <q>accessibility benefits everyone</q>.</p>
+    </section>
+  </main>
+
+  <aside
+    role="complementary"
+    aria-label="Related resources"
+  >
+    <h2>Related Resources</h2>
+    <ul>
+      <li><a href="https://accessibilite.numerique.gouv.fr/">RGAA Official Documentation</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG Quick Reference</a></li>
+    </ul>
+  </aside>
+
+  <footer role="contentinfo">
+    <p>© 2024 RGAA Copilot Test Page. This page is designed to pass RGAA 4.1.2 criteria.</p>
+  </footer>
+
+  <div
+    aria-live="polite"
+    class="visually-hidden"
+    id="status-announcements"
+  ></div>
+</body>
+
+</html>

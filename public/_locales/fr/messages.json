@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "RGAA Copilot",
+    "description": "Nom de l'extension"
+  },
+  "extensionDescription": {
+    "message": "Votre compagnon d'accessibilité pour la conformité RGAA 4.1 sur Firefox et Chrome",
+    "description": "Description de l'extension"
+  }
+}

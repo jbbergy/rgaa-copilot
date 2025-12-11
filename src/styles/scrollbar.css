@@ -1,0 +1,70 @@
+/**
+ * Modern Scrollbar Styles - Spotify-inspired
+ * Supports both WebKit browsers (Chrome, Edge, Safari) and Firefox
+ */
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-bg-elevated) var(--color-bg-secondary);
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  border: 3px solid var(--color-bg-secondary);
+  transition: background var(--transition-base);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bg-hover);
+  border: 2px solid var(--color-bg-secondary);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: var(--color-border);
+}
+
+/* Scrollbar corner when both scrollbars are visible */
+*::-webkit-scrollbar-corner {
+  background: var(--color-bg-secondary);
+}
+
+/* Thin scrollbar variant for compact areas */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  border: 2px solid var(--color-bg-secondary);
+}
+
+/* Scrollbar with primary color on hover (Spotify green accent) */
+.scrollbar-accent::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary-active),
+    var(--color-bg-hover)
+  );
+}
+
+/* Hide scrollbar but keep functionality (for custom implementations) */
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}

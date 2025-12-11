@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "webextensions": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "error",
+    "vue/multi-word-component-names": "off",
+    "semi": ["error", "never"],
+    "quotes": ["error", "double"]
+  }
+}
