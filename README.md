@@ -5,11 +5,11 @@
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-green?style=flat-square)
 
-Your accessibility companion for RGAA 4.1.2 (Référentiel Général d'Amélioration de l'Accessibilité) compliance in Firefox and Chrome.
+Your accessibility companion for RGAA 4.1 (Référentiel Général d'Amélioration de l'Accessibilité) compliance in Firefox and Chrome.
 
 ## Features
 
-- ✅ **106 RGAA 4.1.2 criteria** - Complete coverage of French accessibility standards
+- ✅ **106 RGAA 4.1 criteria** - Complete coverage of French accessibility standards
 - 🌍 **Bilingual support** - French and English interface
 - 🎯 **Real-time auditing** - Instant accessibility analysis
 - 📊 **Detailed reports** - Violation details with remediation guidance
@@ -128,7 +128,7 @@ src/
 - [Quick Start Guide](docs/quickstart.md)
 - [Firefox Compatibility Guide](docs/FIREFOX-COMPATIBILITY.md)
 - [Firefox Testing Guide](docs/FIREFOX-TESTING.md)
-- [RGAA 4.1.2 Reference](https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/)
+- [RGAA 4.1 Reference](https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/)
 
 ## Contributing
 
